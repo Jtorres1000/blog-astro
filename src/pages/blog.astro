@@ -1,8 +1,11 @@
 ---
+import "../styles/global.css";
+import Navigation from "../components/navigation.astro";
+("../components/navigation.astro");
 const pageTitle = "My Astro Learning Blog";
 ---
 
-<html lang="en">
+<html lang="en" data-theme="cupcake">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -11,9 +14,10 @@ const pageTitle = "My Astro Learning Blog";
     <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <div class="navbar bg-base-100">
+      <a class="btn btn-ghost text-xl">daisyUI</a>
+      <Navigation />
+    </div>
     <h1>{pageTitle}</h1>
     <h1>Welcome, this will be the blog part of my astro webpage!</h1>
     <p>Blog truco</p>
